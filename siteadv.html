@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubens & Associados | Advocacia de Excelência</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-blue: #001f3f;
+            --accent-gold: #b38f00;
+            --light-gray: #f4f7f6;
+            --text-dark: #333333;
+            --white: #ffffff;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+            background-color: var(--white);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: var(--primary-blue);
+            padding: 1.2rem 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .logo {
+            color: var(--white);
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2.5rem;
+        }
+
+        nav ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-gold);
+        }
+
+        .cta-header {
+            background: var(--accent-gold);
+            color: var(--white);
+            padding: 0.7rem 1.5rem;
+            border-radius: 2px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-decoration: none;
+            transition: var(--transition);
+            text-transform: uppercase;
+        }
+
+        .cta-header:hover {
+            background: #d4ac0d;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(179, 143, 0, 0.3);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 31, 63, 0.85), rgba(0, 31, 63, 0.85)), 
+                        url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=1600') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 10%;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            font-weight: 300;
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* --- Seções Gerais --- */
+        section {
+            padding: 120px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 4rem;
+            color: var(--primary-blue);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--accent-gold);
+            margin: 20px auto 0;
+        }
+
+        /* --- Cards Áreas --- */
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .area-card {
+            background: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 0;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.04);
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+
+        .area-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 50px rgba(0,31,63,0.1);
+            border-color: var(--accent-gold);
+        }
+
+        .area-card i {
+            font-size: 3rem;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .area-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 80px 10% 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 4rem;
+            margin-bottom: 60px;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            text-align: center;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            opacity: 0.6;
+        }
+
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .hero-content h1 { font-size: 3rem; }
+            header nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Rubens & Associados</div>
+        <nav>
+            <ul>
+                <li><a href="#sobre">O Escritório</a></li>
+                <li><a href="#areas">Áreas de Atuação</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <a href="#contato" class="cta-header">Consulta Jurídica</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+            <h1>Justiça com Integridade <br>& Resultados</h1>
+            <p>Em Rubens & Associados, combinamos tradição jurídica com estratégias modernas para garantir a melhor defesa dos seus interesses.</p>
+            <a href="#contato" class="cta-header" style="padding: 1.2rem 2.5rem; font-size: 0.9rem;">Agendar Reunião</a>
+        </div>
+    </section>
+
+    <section id="areas" style="background: var(--light-gray);">
+        <h2 class="section-title" data-aos="fade-up">Especialidades</h2>
+        <div class="areas-grid">
+            <div class="area-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-balance-scale"></i>
+                <h3>Direito Civil</h3>
+                <p>Resolução de conflitos contratuais, responsabilidade civil e direitos de propriedade.</p>
+            </div>
+            <div class="area-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-landmark"></i>
+                <h3>Empresarial</h3>
+                <p>Suporte jurídico completo para empresas, desde a fundação até fusões e aquisições.</p>
+            </div>
+            <div class="area-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-users-items"></i>
+                <h3>Família e Sucessões</h3>
+                <p>Mediação e litígios em divórcios, partilhas de bens e inventários complexos.</p>
+            </div>
+            <div class="area-card" data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Direito Criminal</h3>
+                <p>Defesa técnica especializada em crimes de colarinho branco e direito penal econômico.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 5rem;">
+            <div style="flex: 1; min-width: 320px;" data-aos="fade-right">
+                <div style="position: relative;">
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800" alt="Rubens & Associados" style="width: 100%; border-radius: 2px;">
+                    <div style="position: absolute; bottom: -20px; right: -20px; width: 100%; height: 100%; border: 2px solid var(--accent-gold); z-index: -1;"></div>
+                </div>
+            </div>
+            <div style="flex: 1; min-width: 320px;" data-aos="fade-left">
+                <h2 class="section-title" style="text-align: left; margin-bottom: 2rem;">Compromisso Rubens & Associados</h2>
+                <p style="font-size: 1.1rem; color: #555;">Desde a nossa fundação, o foco tem sido um só: proporcionar segurança jurídica através de um atendimento artesanal e altamente qualificado.</p>
+                <br>
+                <p>Acreditamos que cada caso é único. Por isso, em Rubens & Associados, você não é apenas um número de processo. Nossa equipe dedica-se integralmente a entender suas necessidades e construir soluções vitoriosas.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <div class="footer-content">
+            <div>
+                <span class="footer-logo">Rubens & Associados</span>
+                <p style="opacity: 0.8;">Excelência jurídica e ética em cada causa defendida.</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent-gold);">Fale Conosco</h4>
+                <p><i class="fas fa-phone" style="margin-right: 10px;"></i> (11) 98888-7777</p>
+                <p><i class="fas fa-envelope" style="margin-right: 10px;"></i> contato@rubensadvocacia.com.br</p>
+                <p><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> Av. Paulista, 1000 - São Paulo/SP</p>
+            </div>
+            <div>
+                <h4 style="margin-bottom: 1.5rem; color: var(--accent-gold);">Horário</h4>
+                <p>Segunda — Sexta</p>
+                <p>09:00 - 19:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Rubens & Associados. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializa animações de rolagem
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 200,
+            easing: 'ease-in-out-quad'
+        });
+
+        // Efeito de mudar cor do header ao rolar
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.padding = '0.8rem 8%';
+                header.style.backgroundColor = 'rgba(0, 31, 63, 0.98)';
+            } else {
+                header.style.padding = '1.2rem 8%';
+                header.style.backgroundColor = '#001f3f';
+            }
+        });
+    </script>
+</body>
+</html>
